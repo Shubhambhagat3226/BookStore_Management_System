@@ -1,0 +1,139 @@
+/* Reset some default styles for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Form layout */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+/* Styling the form container */
+.form-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Styling the form title */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus, textarea:focus {
+    border-color: #66afe9;
+    outline: none;
+}
+
+/* Styling the submit button */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive styles */
+
+/* Extra small screens (e.g., small mobile devices, <480px) */
+@media (max-width: 480px) {
+    .form-container {
+        max-width: 90%; /* Use more screen width for very small screens */
+        min-width: 280px; /* Slightly smaller min-width for tiny screens */
+        padding: 15px; /* Reduced padding for compactness */
+    }
+
+    h2 {
+        font-size: 20px; /* Smaller title */
+        margin-bottom: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 12px; /* Slightly reduced spacing */
+    }
+
+    label {
+        font-size: 14px; /* Smaller label text */
+    }
+
+    input, textarea {
+        padding: 8px; /* Reduced padding for inputs */
+        font-size: 14px; /* Smaller font for readability */
+    }
+
+    button {
+        padding: 10px; /* Reduced padding for button */
+        font-size: 14px;
+    }
+}
+
+/* Small screens (e.g., larger mobile devices, 481px - 600px) */
+@media (min-width: 481px) and (max-width: 600px) {
+    .form-container {
+        max-width: 68%; /* Matches your original mobile design */
+        min-width: 340px;
+        padding: 18px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .form-group {
+        margin-bottom: 14px;
+    }
+
+    label {
+        font-size: 15px;
+    }
+
+    input, textarea {
+        padding: 9px;
+        font-size: 15px;
+    }
+
+    button {
+        padding: 11px;
+        font-size: 15px;
+    }
+}
+
+/* Medium screens (e.g

@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container span {
+  color: #000;
+  font-style: italic;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 20px;
+  background-color: #353232;
+  color: #fff;
+}
+
+.logo {
+  font-weight: bolder;
+  font-size: 30px;
+  color: #4f46e5;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin: 0 16px;
+  color: #e5dbdb;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #535ebf;
+}
+
+.active {
+  color: #4f46e5;
+  border-bottom: 2px solid #4f46e5;
+}
+
+.auth-links {
+  display: flex;
+  align-items: center;
+}
+
+.login {
+  color: #4f46e5;
+  margin-right: 16px;
+}
+
+.cta-button {
+  background-color: #4f46e5;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.cta-button:hover {
+  background-color: #4338ca;
+}
+
+/* Main content styles */
+main {
+  display: flex;
+  padding: 48px 0;
+  gap: 32px;
+  align-items: center;
+}
+
+.content {
+  flex: 1;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.description {
+  color: #666;
+  margin-bottom: 32px;
+  max-width: 500px;
+}
+
+.page-link {
+  color: #4f46e5;
+  display: flex;
+  align-items: center;
+}
+
+.page-link span {
+  margin-left: 8px;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Responsive styles */
+
+/* Extra small screens (e.g., small mobile devices, <480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px; /* Reduced padding for smaller screens */
+  }
+
+  header {
+    flex-direction: column;
+    padding: 16px 10px;
+    font-size: 12px;
+    gap: 10px; /* Add spacing between stacked elements */
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  nav a {
+    margin: 8px 0;
+  }
+
+  .auth-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .login {
+    margin-right: 0;
+  }
+
+  .cta-button {
+    padding: 6px 12px;
+    width: 100%; /* Full-width button for easier tapping */
+  }
+
+  main {
+    flex-direction: column;
+    padding: 24px 0;
+    gap: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 14px;
+    max-width: 100%; /* Full width for readability */
+  }
+
+  .book-image {
+    max-width: 250px;
+  }
+}
+
+/* Small screens (e.g., larger mobile devices, 481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  header {
+    padding: 20px 15px;
+    font-size: 14px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  nav a {
+    margin: 0 12px;
+  }
+
+  .cta-button {
+    padding: 7px 14px;
+  }
+
+  main {
+    flex-direction: column;
+    padding: 32px 0;
+    gap: 24px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .book-image {
+    max-width: 300px;
+  }
+}
+
+/* Medium screens (e.g., tablets, 769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  header {
+    padding: 20px;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+
+  nav a {
+    margin: 0 14px;
+  }
+
+  main {
+    flex-direction: row; /* Keep row layout for tablets */
+    padding: 40px 0;
+    gap: 28px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .book-image {
+    max-width: 400px;
+  }
+}
+
+/* Large screens (e.g., desktops, >1024px) */
+@media (min-width: 1025px) {
+  header {
+    padding: 24px 20px;
+  }
+
+  .logo {
+    font-size: 30px;
+  }
+
+  nav a {
+    margin: 0 16px;
+  }
+
+  main {
+    padding: 48px 0;
+    gap: 32px;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .book-image {
+    max-width: 500px;
+  }
+}

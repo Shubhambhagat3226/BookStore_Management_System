@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Error</title>
+    <link rel="stylesheet" th:href="@{/css/navStyle.css}">
+
+</head>
+<body>
+<header>
+    <div class="logo"> <a href="/">BookStore</a></div>
+    <nav>
+        <a href="/" class="active">Home</a>
+        <a href="available_books">Available Book</a>
+        <a href="my_books" >My Book</a>
+    </nav>
+    <div class="auth-links">
+        <a href="book_register" class="registerBook">Register Book</a>
+    </div>
+</header>
+    <h1>Error Occurred</h1>
+    <p>Status Code: <span th:text="${status}"></span></p>
+    <p>Message: <span th:text="${errorMessage}"></span></p>
+    <p>Path: <span th:text="${path}"></span></p>
+</body>
+</html>

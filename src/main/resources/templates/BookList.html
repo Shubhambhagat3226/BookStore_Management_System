@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books list</title>
+    <link rel="stylesheet" th:href="@{/css/navStyle.css}">
+    <link rel="stylesheet" th:href="@{/css/table.css}">
+    <link rel="stylesheet" th:href="@{/css/icon.css}">
+</head>
+<body>
+    <header>
+        <div class="logo"> <a href="/">BookStore</a></div>
+        <nav>
+          <a href="/" >Home</a>
+          <a href="available_books" class="active">Available Book</a>
+          <a href="my_books" >My Book</a>
+        </nav>
+        <div class="auth-links">
+          <a href="book_register" class="registerBook">Register Book</a>
+        </div>
+      </header>
+      <div class="container">
+          <h2>Available Books</h2>
+          <table>
+              <thead>
+                  <tr>
+                      <th>Id</th>
+                      <th>Name</th>
+                      <th>Author</th>
+                      <th>Price</th>
+                      <th>Action</th>
+                  </tr>
+              </thead>
+              <tbody id="tbody">
+                  <!-- insert data dynamically though backend -->
+                   <tr th:each="b :${books}">
+                    <td th:text="${b.id}"></td>
+                    <td th:text="${b.name}"></td>
+                    <td th:text="${b.author}"></td>
+                    <td th:text="${b.price}"></td>
+                    <td class='action'>
+                      <a class="add" th:href="@{/mylist/{id}(id=${b.id})}">Add to MyBook</a>
+                      <a th:href="@{/edit/{id}(id=${b.id})}" class="action-link" title="Edit">
+                        <img th:src="@{/images/edit.png}" alt="Edit" class="action-icon"/>
+                    </a>
+                    <a th:href="@{/delete/{id}(id=${b.id})}" class="action-link" title="Delete" 
+                       onclick="return confirm('Are you sure you want to delete this book?');">
+                        <img th:src="@{/images/delete.png}" alt="Delete" class="action-icon"/>
+                    </a>
+                    </td>
+                   </tr>
+
+              </tbody>
+          </table>
+      </div>
+  
+</body>
+</html>

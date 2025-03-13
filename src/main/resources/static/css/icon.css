@@ -1,0 +1,72 @@
+/* Action column styles */
+.action {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.action .add {
+    background-color: #4CAF50;
+    padding: 8px 14px;
+    border-radius: 12px;
+    color: #f0f0f0;
+    font-weight: bold;
+}
+
+.action-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.action-link:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+.action-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .activity {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .activity .add {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .action-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .activity {
+        gap: 10px;
+    }
+
+    .activity .add {
+        font-size: 13px;
+        padding: 7px 13px;
+    }
+
+    .action-icon {
+        width: 22px;
+        height: 22px;
+    }
+}
